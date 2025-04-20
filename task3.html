@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra Pradesh - Cultural Heritage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'telugu': ['Tiro Telugu', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'andhra': {
+                            'yellow': '#FFD700',
+                            'red': '#FF4136',
+                            'blue': '#0074D9',
+                            'green': '#2ECC40'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Advanced Blend Modes */
+        .blend-multiply { mix-blend-mode: multiply; }
+        .blend-overlay { mix-blend-mode: overlay; }
+        .blend-soft-light { mix-blend-mode: soft-light; }
+        .blend-color-burn { mix-blend-mode: color-burn; }
+        
+        /* Complex Gradient Masks */
+        .mask-fade-diagonal {
+            mask-image: linear-gradient(45deg, black 40%, transparent 60%);
+            -webkit-mask-image: linear-gradient(45deg, black 40%, transparent 60%);
+        }
+        
+        .mask-radial-center {
+            mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+            -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+        }
+
+        /* SVG Masks */
+        .mask-temple {
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,0 L90,40 L80,40 L80,100 L20,100 L20,40 L10,40 Z' fill='black'/%3E%3C/svg%3E");
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,0 L90,40 L80,40 L80,100 L20,100 L20,40 L10,40 Z' fill='black'/%3E%3C/svg%3E");
+        }
+
+        /* Custom Animations */
+        @keyframes culturalFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(3deg); }
+        }
+
+        .animate-cultural {
+            animation: culturalFloat 6s ease-in-out infinite;
+        }
+
+        /* Traditional Pattern */
+        .pattern-andhra {
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(255, 215, 0, 0.1),
+                rgba(255, 215, 0, 0.1) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        }
+    </style>
+</head>
+<body class="font-poppins">
+    <!-- Hero Section -->
+    <header class="relative h-[70vh] overflow-hidden">
+        <div class="absolute inset-0">
+            <img 
+                src="prakasam-barrage.jpg"
+                alt="Andhra Culture"
+                class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60"></div>
+        </div>
+        <nav class="relative z-10 px-6 py-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-4xl font-telugu text-white">ఆంధ్ర ప్రదేశ్</h1>
+                <div class="space-x-6 text-white text-lg">
+                    <a href="#art" class="hover:text-andhra-yellow transition-colors">Art & Culture</a>
+                    <a href="#cuisine" class="hover:text-andhra-red transition-colors">Cuisine</a>
+                    <a href="#festivals" class="hover:text-andhra-blue transition-colors">Festivals</a>
+                    <a href="#Temples" class="hover:text-andhra-blue transition-colors">Temples</a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="relative container mx-auto px-6 h-full flex items-center justify-center text-center">
+            <div class="text-white max-w-4xl">
+                <h2 class="text-8xl font-telugu mb-6 animate-cultural">
+                    Andhra Pradesh
+                </h2>
+                <p class="text-3xl">Land of Ancient Wisdom and Rich Culture</p>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Art & Culture Section -->
+    <section id="art" class="py-24 bg-gradient-to-b from-andhra-yellow/10 to-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-5xl font-telugu text-andhra-yellow mb-6">
+                    Art & Cultural Heritage
+                </h2>
+                <p class="text-lg text-gray-700">
+                    Celebrating the rich artistic traditions of Andhra Pradesh
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Classical Dance -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+                    <img 
+                        src="5556d634ee9fc86dd09cfdfe0ebf4a94.jpg"
+                        alt="Kuchipudi Dance"
+                        class="w-full h-96 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div class="absolute inset-0 bg-andhra-yellow/30 blend-soft-light"></div>
+                    <div class="absolute bottom-0 p-6 text-white">
+                        <h3 class="text-2xl font-telugu">Kuchipudi</h3>
+                        <p>Classical dance form of Andhra</p>
+                    </div>
+                </div>
+
+                <!-- Handicrafts -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+                    <img 
+                        src="Handloom.jpg"
+                        alt="Handloom Weaving"
+                        class="w-full h-96 object-cover mask-fade-diagonal"
+                    />
+                    <div class="absolute inset-0 bg-andhra-red/30 blend-overlay"></div>
+                    <div class="absolute bottom-0 p-6 text-white">
+                        <h3 class="text-2xl font-telugu">Handloom Weaving</h3>
+                        <p>Traditional textile craftsmanship</p>
+                    </div>
+                </div>
+
+                <!-- Temple Architecture -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-2xl temple-image-container">
+                    <div class="absolute inset-0 z-0 bg-gradient-to-br from-indigo-900 via-purple-700 to-pink-500 opacity-60 mix-blend-overlay"></div>
+                
+                    <img 
+                        src="44672a4742125e1ca86616a573ebd229.jpg"
+                        alt="Temple Architecture"
+                        class="temple-image w-full h-96 object-cover z-10"
+                    />
+                
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20 bg-black/40 backdrop-blur-sm">
+                        <h3 class="text-3xl font-telugu">Temple Architecture</h3>
+                        <p class="text-lg">Ancient architectural marvels</p>
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <!-- Cuisine Section -->
+    <section id="cuisine" class="py-24 bg-gradient-to-b from-white to-andhra-red/10">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-5xl font-telugu text-andhra-red mb-6">
+                    Telugu Cuisine
+                </h2>
+                <p class="text-lg text-gray-700">
+                    Famous for its spicy and tangy flavors
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Traditional Dishes -->
+                <div class="space-y-8">
+                    <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+                        <img 
+                            src="andhra-meals.jpg"
+                            alt="Andhra Meals"
+                            class="w-full h-[300px] object-cover mask-radial-center"
+                        />
+                        <div class="absolute inset-0 bg-andhra-red/20 blend-overlay"></div>
+                        <div class="absolute bottom-0 p-6 text-white">
+                            <h3 class="text-2xl font-telugu">Traditional Thali</h3>
+                            <p>Complete Andhra meal experience</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+                        <img 
+                            src="Sugar-free-Putharekulu_480x480.webp"
+                            alt="Andhra Snacks"
+                            class="w-full h-[300px] object-cover"
+                        />
+                        <div class="absolute inset-0 bg-andhra-yellow/20 blend-soft-light"></div>
+                        <div class="absolute bottom-0 p-6 text-white">
+                            <h3 class="text-2xl font-telugu">Traditional Snacks</h3>
+                            <p>Flavorful street food delicacies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cuisine Description -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 pattern-andhra">
+                    <h3 class="text-3xl font-telugu text-andhra-red mb-6">Famous Dishes</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-andhra-red mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-bold text-andhra-red">Pulihora</h4>
+                                <p class="text-gray-600">Tamarind flavored rice with traditional tempering</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-andhra-red mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-bold text-andhra-red">Gongura Pachadi</h4>
+                                <p class="text-gray-600">Signature Andhra chutney made from sorrel leaves</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-andhra-red mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-bold text-andhra-red">Pesarattu</h4>
+                                <p class="text-gray-600">Nutritious green gram dosa with unique taste</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Festivals Section -->
+    <section id="festivals" class="py-24 bg-gradient-to-b from-andhra-blue/10 to-white">
+        <div class="container mx-auto px-6">
+          <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="text-5xl font-telugu text-andhra-blue mb-6">Festivals & Celebrations</h2>
+            <p class="text-lg text-gray-700">Vibrant celebrations throughout the year</p>
+          </div>
+      
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Sankranti -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-2xl festival-card">
+              <div class="absolute inset-0 bg-yellow-300/40 mix-blend-multiply z-0"></div>
+              <img 
+                src="1411907-makar-sankranti.webp"
+                alt="Sankranti"
+                class="festival-image"
+              />
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20 bg-black/40 backdrop-blur-sm">
+                <h3 class="text-2xl font-telugu">Sankranti</h3>
+                <p>Harvest festival celebrations</p>
+              </div>
+            </div>
+      
+            <!-- Ugadi -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-2xl festival-card">
+              <div class="absolute inset-0 bg-green-300/40 mix-blend-soft-light z-0"></div>
+              <img 
+                src="Pulihora-Ugadi-Pachidi-Poornam-Borelu-2-1075x605-1.jpg"
+                alt="Ugadi"
+                class="festival-image"
+              />
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20 bg-black/40 backdrop-blur-sm">
+                <h3 class="text-2xl font-telugu">Ugadi</h3>
+                <p>Telugu New Year</p>
+              </div>
+            </div>
+      
+            <!-- Bathukamma -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-2xl festival-card">
+              <div class="absolute inset-0 bg-red-400/30 mix-blend-color-burn z-0"></div>
+              <img 
+                src="Vijayadashami_Dasara_Dussehra_Durga_Pooja_India_October_2013_20200504190620.jpg"
+                alt="Dasara"
+                class="festival-image"
+              />
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20 bg-black/40 backdrop-blur-sm">
+                <h3 class="text-2xl font-telugu">Dasara</h3>
+                <p>Floral festival celebration</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+   <!-- Temples Section -->
+<section id="temples" class="py-24 bg-gradient-to-b from-white to-andhra-yellow/10">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="text-5xl font-telugu text-andhra-yellow mb-6">
+                Temples of Andhra Pradesh
+            </h2>
+            <p class="text-lg text-gray-700">
+                Sacred architecture and spiritual heritage
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Tirumala Venkateswara Temple -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+                <img 
+                    src="Original-Photo-Of-Lord-Sri-Venkateswara.jpg"
+
+                    alt="Tirumala Temple"
+                    class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="absolute bottom-0 p-6 text-white">
+                    <h3 class="text-2xl font-telugu">Tirumala Venkateswara</h3>
+                    <p>World-famous hill temple dedicated to Lord Venkateswara in Tirupati.</p>
+                </div>
+            </div>
+
+            <!-- Kanaka Durga Temple -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+                <img 
+                    src="shutterstock_1162596238_20200302103757.png"
+                    alt="Kanaka Durga Temple"
+                    class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="absolute bottom-0 p-6 text-white">
+                    <h3 class="text-2xl font-telugu">Kanaka Durga Temple</h3>
+                    <p>Majestic temple of Goddess Durga on Indrakeeladri Hill in Vijayawada.</p>
+                </div>
+            </div>
+
+            <!-- Simhachalam Temple -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+                <img 
+                    src="simhachalam-lord-sri.jpg"
+                    alt="Simhachalam Temple"
+                    class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="absolute bottom-0 p-6 text-white">
+                    <h3 class="text-2xl font-telugu">Simhachalam Temple</h3>
+                    <p>Lord Narasimha’s shrine near Visakhapatnam with a unique mix of architecture.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-2xl font-telugu mb-4">ఆంధ్ర ప్రదేశ్</h3>
+                    <p class="text-gray-400">Celebrating the cultural heritage of Andhra Pradesh.</p>
+                </div>
+    
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Explore</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#art" class="text-gray-400 hover:text-white transition-colors">Art & Culture</a></li>
+                        <li><a href="#cuisine" class="text-gray-400 hover:text-white transition-colors">Cuisine</a></li>
+                        <li><a href="#festivals" class="text-gray-400 hover:text-white transition-colors">Festivals</a></li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@andhraheritage.com</li>
+                        <li>Phone: (123) 456-7890</li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4 text-gray-400">
+                        <!-- Facebook -->
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.334C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.127V8.41c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.919.001c-1.504 0-1.796.715-1.796 1.764v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403 24 24 23.403 24 22.667V1.333C24 .597 23.403 0 22.675 0z"/>
+                            </svg>
+                        </a>
+    
+                        <!-- Twitter -->
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Twitter">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557a9.9 9.9 0 0 1-2.828.775 4.93 4.93 0 0 0 2.165-2.724 9.865 9.865 0 0 1-3.127 1.195A4.918 4.918 0 0 0 16.616 3c-2.72 0-4.924 2.204-4.924 4.924 0 .39.044.765.128 1.127C7.728 8.816 4.1 6.871 1.671 3.873a4.93 4.93 0 0 0-.666 2.475c0 1.708.869 3.215 2.188 4.099a4.903 4.903 0 0 1-2.23-.616v.062c0 2.385 1.693 4.374 3.946 4.827a4.935 4.935 0 0 1-2.224.084c.626 1.956 2.444 3.377 4.6 3.419A9.867 9.867 0 0 1 0 19.54a13.933 13.933 0 0 0 7.548 2.212c9.057 0 14.01-7.504 14.01-14.009 0-.213-.004-.426-.014-.637A10.025 10.025 0 0 0 24 4.557z"/>
+                            </svg>
+                        </a>
+    
+                        <!-- Instagram -->
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.2 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.243 1.311 3.608.058 1.265.07 1.649.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.243 1.249-3.608 1.311-1.265.058-1.649.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.243-1.311-3.608C2.175 15.584 2.163 15.2 2.163 12s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.243-1.249 3.608-1.311C8.416 2.175 8.8 2.163 12 2.163M12 0C8.741 0 8.332.015 7.053.072 5.775.129 4.62.444 3.678 1.386 2.736 2.328 2.421 3.483 2.364 4.761.015 8.332 0 8.741 0 12s.015 3.668.072 4.947c.057 1.278.372 2.433 1.314 3.375.942.942 2.097 1.257 3.375 1.314 1.278.057 1.687.072 4.947.072s3.668-.015 4.947-.072c1.278-.057 2.433-.372 3.375-1.314.942-.942 1.257-2.097 1.314-3.375.057-1.278.072-1.687.072-4.947s-.015-3.668-.072-4.947c-.057-1.278-.372-2.433-1.314-3.375-.942-.942-2.097-1.257-3.375-1.314C15.668.015 15.259 0 12 0zm0 5.838A6.162 6.162 0 1 0 18.162 12 6.169 6.169 0 0 0 12 5.838zm0 10.162A3.998 3.998 0 1 1 16 12a3.998 3.998 0 0 1-4 4zm6.406-11.845a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Andhra Pradesh Heritage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
